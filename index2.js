@@ -40,9 +40,9 @@ for(let a=0; a < 26; a++){
                             fetch(`https://shallenge.onrender.com/challenges/${data.id}/answer`, {
                                 method : "POST",
                                 headers : {"Content-Type" : "application/json"},
-                                body : `${alphabet[a]}${alphabet[b]}${alphabet[c]}${alphabet[d]}${alphabet[e]}${alphabet[f]}`
+                                body : JSON.stringify(`${alphabet[a]}${alphabet[b]}${alphabet[c]}${alphabet[d]}${alphabet[e]}${alphabet[f]}`)
                             })
-                            .then(res =>  res.text())
+                            .then(res =>  res.json())
                             .then(data => console.log(data))
                             
                             ;
