@@ -42,7 +42,7 @@ for(let a=0; a < 26; a++){
                                 headers : {"Content-Type" : "application/json"},
                                 body : `${alphabet[a]}${alphabet[b]}${alphabet[c]}${alphabet[d]}${alphabet[e]}${alphabet[f]}`
                             })
-                            .then(res => {console.log(res.status) ;return res.text()})
+                            .then(res =>  res.text())
                             .then(data => console.log(data))
                             
                             ;
